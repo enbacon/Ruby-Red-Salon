@@ -1,0 +1,22 @@
+{{#each nail_polishes as |polish|}}
+  {{log polish}}
+  <section data-id="{{polish.id}}" class="{{#if polish.author}}has-author{{/if}}">
+    <h6>Title:</h6>
+    <h3>
+      {{limit polish.title 15}}
+    </h3>
+    <h6>Author:</h6>
+    <p>
+      {{#if polish.author}}
+        {{polish.author}}
+      {{else}}
+        No author provided.
+      {{/if}}
+    </p>
+    <!-- {{> partial}} -->
+    <button data-id="{{polish.id}}" class= 'btn btn-danger delete-button'>Remove polish</button>
+  </section>
+
+{{/each}}
+
+<!-- FINISH ADJUSTING FROM BOOKS EXAMPLE TO POLISH EXAMPLE -->
