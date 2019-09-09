@@ -1,10 +1,19 @@
 'use strict'
 
+const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onGetPolishes = (event) => {
+const onAddPolish = (event) => {
   event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log('add polish data is', data)
+  api.addPolish(data)
+    .then(ui.addPolishSuccess)
+    .catch(ui.failure)
+}
+
+const onGetPolishes = (event) => {
   api.getPolishes()
     .then(ui.getPolishesSuccess)
     .catch(ui.failure)
@@ -34,5 +43,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onAddPolish
 }

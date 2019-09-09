@@ -106,7 +106,14 @@ p {
   color: red;
 }
 
+
 .sign-up-container {
+  display: flex;
+  justify-content: center;
+}
+
+.new-polish-container,
+.update-polish-container {
   display: flex;
   justify-content: center;
 }

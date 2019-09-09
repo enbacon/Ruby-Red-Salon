@@ -1,6 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events')
+const polishEvents = require('./polishes/events')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -23,4 +24,6 @@ $(() => {
     $('.sign-in-alert').text('')
     $('.change-password-alert').text('')
   })
+  $('#add-polish').on('submit', polishEvents.onAddPolish)
+  $('.new-polish-container').hide()
 })

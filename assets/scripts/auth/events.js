@@ -12,17 +12,13 @@ const ui = require('./ui')
 
 // event handler for sign-up form
 const onSignUp = function (event) {
-  // prevent default action from happening
   event.preventDefault()
   console.log('submitted sign-up!')
   // get form data
   const data = getFormFields(event.target)
   console.log('sign up data is', data)
-  // make the api call
   api.signUp(data)
-  // handle success
     .then(ui.signUpSuccess)
-  // handle failure
     .catch(ui.signUpFailure)
 }
 

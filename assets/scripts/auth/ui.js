@@ -45,9 +45,8 @@ const signInSuccess = function (data) {
   $('#change-password-button').show()
   $('#sign-up').hide()
   $('#sign-in-modal').modal('hide')
-  $('#new-game').show()
+  $('.new-polish-container').show()
   $('#sign-out').show()
-  $('#numGames').show()
   $('.navbar').show()
   $('#hide').css('display', 'block')
   $('.sign-in-alert').text('')
@@ -117,6 +116,8 @@ const createExampleFailure = function () {
 }
 
 module.exports = {
+  setSuccess,
+  setFailure,
   signUpSuccess,
   signUpFailure,
   signInSuccess,
