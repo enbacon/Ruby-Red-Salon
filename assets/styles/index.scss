@@ -1,1 +1,155 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette&display=swap');
+
+$black: #000;
+
+body {
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('https://images.all-free-download.com/images/graphiclarge/blue_bokeh_background_266395.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: grid;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.border {
+  border: 3px solid $black;
+  justify-content: center;
+  margin: 1vw;
+  padding: 1vw;
+}
+
+.box {
+  border: 1px solid;
+}
+
+.btn {
+  padding: .75vw;
+}
+
+.change-password-alert {
+  color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-sm-4 text-center controls pt-2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3em;
+}
+
+
+.fail {
+  border: 5px solid red;
+}
+
+.failure {
+  border: 5px solid red;
+}
+
+h1 {
+  color: white;
+  font-family: 'Courgette', cursive;
+  font-size: 6em;
+  font-weight: 850;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+li {
+  min-width: 12.5vw;
+}
+
+.nav-item {
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.message {
+  margin: 0 auto;
+}
+
+.modal-header {
+  background-color: #2193b0;
+}
+
+.navbar {
+  background-color: #2193b0;
+}
+
+p {
+  font-size: 3em;
+  margin: .1vw;
+  padding: .25vw;
+}
+
+.row {
+  height: 50vmin;
+  text-align: center;
+  width: 50vmin;
+}
+
+.sign-in-alert {
+  color: red;
+}
+
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-container input {
+  font-size: 1em;
+  padding: 1.5em;
+}
+
+small {
+  font-size: .5em;
+  line-height: 15px;
+}
+
+.status-messages {
+  font-size: 1.5em;
+  justify-content: center;
+  // margin: 0 1em;
+  // padding: 0 1em;
+  text-align: center;
+}
+
+.success {
+  border: 5px solid #22f0c0;
+}
+
+.tiles {
+  align-items: center;
+  display: flex;
+  font-family: 'Courgette', cursive;
+  font-size: 10vmin;
+  height: calc(50vmin / 3);
+  justify-content: center;
+}
