@@ -14,6 +14,7 @@ const onAddPolish = (event) => {
 }
 
 const onGetPolishes = (event) => {
+  event.preventDefault()
   api.getPolishes()
     .then(ui.getPolishesSuccess)
     .catch(ui.failure)

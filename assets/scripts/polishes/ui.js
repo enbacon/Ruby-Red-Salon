@@ -7,16 +7,13 @@ const showPolishesTemplate = require('../templates/polish-listing.handlebars')
 const addPolishSuccess = (data) => {
   authUI.setSuccess('Example created successfully!')
   console.log(data)
-  $('#example').text(data.example.text)
+  $('#nail_polish').text(data.polishes.text)
   console.log('createExampleSuccess ran')
 }
 
 const getPolishesSuccess = (data) => {
   console.log(data)
-  const showPolishesHtml = showPolishesTemplate({
-    polishes: data.polishes,
-    title: 'List of Polishes'
-  })
+  const showPolishesHtml = showPolishesTemplate(data)
   $('.content').html(showPolishesHtml)
 }
 
