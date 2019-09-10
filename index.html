@@ -12,8 +12,35 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+<!--
 
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <a class="nav-item dropdown nav-link drop-down-toggle" onkeyup=""
+          </div>
+        </div>
+      </nav>
+
+
+      <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a> -->
+    <footer>
+      <nav class="before-auth navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">created by erin n. bacon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,20 +60,21 @@
           </ul>
         </div>
       </nav>
+    </footer>
 
 
-      <h1 id="greeting">Welcome to Nail Polish Heaven!!!</h1>
-        <div class="status-messages">
+      <h1 id="greeting" class="after-auth">Welcome to Nail Polish Heaven!!!</h1>
+        <!-- <div class="status-messages">
           <div id="signed-in-user"></div>
           <div id="signed-out-user"></div>
           <div id="message" class="message col-sm-10 col-lg-8 text-center"></div>
-        </div>
+        </div> -->
 
         <nav>
-          <div class="get-clear-container">
-            <div class="app-name">Ruby Red</div>
+          <div class="after-auth get-clear-container">
+            <!-- <div class="app-name">Ruby Red</div> -->
             <div class="nav-buttons">
-              <button id="getPolishesButton" class="btn btn-info mr-2">Get Polishes!</button>
+              <button id="getPolishesButton" class="btn btn-info mr-2">Display Polishes!</button>
               <button id="clearPolishesButton" class="btn btn-outline-info">Clear Polishes!</button>
             </div>
           </div>
@@ -56,9 +84,9 @@
             <div id="content" class="content"></div>
         </main>
 
-    <div class="sign-up-container">
+    <div class="before-auth sign-up-container">
       <div id="credentials" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
-        <p>Sign In to See Polish Colors!</p>
+        <h1>The Ruby Red Nail Polish Collection!</h1>
             <form id="sign-up" class="border">
               <h2>sign up</h2>
               <div class="sign-up-alert"></div>
@@ -92,8 +120,8 @@
                 <div class="modal-body">
                   <form id="sign-in" class="border">
                     <div class="sign-in-alert"></div>
-                      <input class="form-control mb-2" type="text" name="credentials[email]" placeholder="Email">
-                      <input class="form-control mb-2" type="password" name="credentials[password]" placeholder="Password">
+                      <input class="form-control mb-2" autocomplete="on" type="text" name="credentials[email]" placeholder="Email">
+                      <input class="form-control mb-2" autocomplete="on" type="password" name="credentials[password]" placeholder="Password">
                       <input class="btn btn-info" type="submit"  value="Sign in!">
                   </form>
                 </div>
@@ -124,7 +152,7 @@
   </div>
 </div>
 
-<div class="new-polish-container">
+<div class="after-auth new-polish-container">
   <div id="new-polish" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
     <p>Add New Polish</p>
         <form id="add-polish" class="border">
@@ -140,19 +168,26 @@
   </div>
 </div>
 
-<div class="update-polish-container">
-  <div class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
-    <p>Update Polish</p>
-        <form id="update-polish" class="border">
-          <h2>Update Polish</h2>
-          <div class="update-polish-alert"></div>
-          <input type="number" autocomplete="off" class="form-control mb-1" name="nail_polish[id]" placeholder="Color Identifier">
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand">
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name">
-          <input type="color" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color">
-          <button type="submit" class="btn btn-primary btn-block">Update Polish!</button>
-        </form>
-  </div>
-</div>
-    </body>
+
+
+    <div id="update-modal" class="update-polish-container modal fade"tabindex="-1" role="dialog" aria-label="update polish" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Update Polish</h4>
+          </div>
+          <div class="modal-body">
+            <form id="update-polish" class="border">
+              <div class="update-polish-alert"></div>
+              <input id="id" type="text" name="nail_polish[id]" hidden>
+              <input id="brand" type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+              <input id="color-name" type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+              <input id="color" type="color" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
+              <button type="submit" class="btn btn-primary btn-block">Update Polish!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Asar|Farsan|Merienda|Norican|Sofia&display=swap');
 
 $black: #000;
 
@@ -9,12 +9,13 @@ $black: #000;
 }
 
 body {
-  background: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('https://images.all-free-download.com/images/graphiclarge/blue_bokeh_background_266395.jpg');
+  background-image: url('../../public/nail-polish.jpg');
   background-position: center;
   background-size: cover;
-  color: white;
+  color: #D90909;
   display: grid;
-  min-height: 100vh;
+  font-family: 'Merienda', cursive;
+  min-height: 90vh;
   padding-bottom: 5rem;
 }
 
@@ -58,11 +59,11 @@ body {
 }
 
 h1 {
-  color: white;
+  color: #D90909;
   font-family: 'Courgette', cursive;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 850;
-  margin: 0 auto;
+  margin: 20px 10px 20px 10px;
   text-align: center;
 }
 
@@ -90,12 +91,22 @@ h2 {
   background-color: #2193b0;
 }
 
+.modal-title {
+  color: white;
+}
+
 .navbar {
   background-color: #2193b0;
 }
 
+.nav-buttons {
+  justify-content: center;
+}
+
 p {
   font-size: 3em;
+  font-weight: 600;
+  line-height: normal;
   margin: .1vw;
   padding: .25vw;
 }
@@ -141,10 +152,6 @@ small {
   // margin: 0 1em;
   // padding: 0 1em;
   text-align: center;
-}
-
-.success {
-  border: 5px solid #22f0c0;
 }
 
 .update-polish-alert  {
