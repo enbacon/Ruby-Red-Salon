@@ -25,7 +25,6 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   console.log('sign in attempted')
-
   const data = getFormFields(event.target)
   console.log('sign in data is', data)
   api.signIn(data)

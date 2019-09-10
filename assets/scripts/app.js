@@ -18,7 +18,7 @@ $(() => {
   $('#sign-out').hide()
   $('#change-password-button').hide()
   $('.container').hide()
-  $('#numGames').hide()
+  $('#greeting').hide()
   $('.navbar').hide()
   $('.modal').on('hidden.bs.modal', function () {
     $('form').trigger('reset')

@@ -12,7 +12,10 @@ const getPolishes = function () {
 const deletePolish = function (id) {
   return $.ajax({
     url: config.apiUrl + '/nail_polishes/' + id,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 

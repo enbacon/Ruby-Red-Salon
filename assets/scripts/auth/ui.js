@@ -19,12 +19,13 @@ const setSuccess = function (text) {
 const signUpSuccess = function () {
   // store.token = data.user.token
   setSuccess('Signed up successfully!')
+  $('#sign-up').hide()
   $('form').trigger('reset')
   console.log('singUpSuccess ran')
 }
 
 const signUpFailure = function () {
-  setFailure('Sign up was not successful.')
+  $('.sign-up-alert').text('Sign up was not successful')
   $('form').trigger('reset')
   console.log('signUpFailure ran')
 }
@@ -55,19 +56,21 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-  setFailure('Sign in was not successful.')
+  $('.sign-in-alert').text('Sign in was not successful')
+  $('.sign-up-alert').text('')
   $('form').trigger('reset')
   console.log('signInFailure ran')
 }
 const changePasswordSuccess = function () {
   setSuccess('Password changed successfully!')
   $('#change-password-modal').modal('hide')
+  $('.change-password-alert').text('')
   $('form').trigger('reset')
   console.log('changePasswordSuccess ran')
 }
 
 const changePasswordFailure = function () {
-  setFailure('Password was not changed succesfully.')
+  $('.change-password-alert').text('Password was not changed succesfully.')
   $('form').trigger('reset')
   console.log('changePasswordFailure ran')
 }
@@ -86,11 +89,12 @@ const signOutSuccess = function () {
   $('#sign-up').show()
   $('#sign-out').hide()
   $('.container').hide()
-  $('#new-game').hide()
   $('#numGames').hide()
   $('#games-message').hide()
   $('.navbar').hide()
+  $('.new-polish-container').hide()
   $('#credentials').show()
+  $('.new-polish-container').hide()
   $('form').trigger('reset')
   console.log('Signed out successfully')
 }

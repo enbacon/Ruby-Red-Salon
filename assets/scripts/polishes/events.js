@@ -10,6 +10,9 @@ const onAddPolish = (event) => {
   console.log('add polish data is', data)
   api.addPolish(data)
     .then(ui.addPolishSuccess)
+    .then(function () {
+      onGetPolishes(event)
+    })
     .catch(ui.failure)
 }
 
