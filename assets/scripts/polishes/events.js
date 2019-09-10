@@ -13,7 +13,18 @@ const onAddPolish = (event) => {
     .then(function () {
       onGetPolishes(event)
     })
-    .catch(ui.failure)
+    .catch(ui.addPolishFailure)
+}
+
+const onUpdatePolish = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updatePolish(data)
+    .then(ui.updatePolishSuccess)
+    .then(function () {
+      onGetPolishes(event)
+    })
+    .catch(ui.updatePolishFailure)
 }
 
 const onGetPolishes = (event) => {
@@ -44,9 +55,11 @@ const addHandlers = () => {
   $('#getPolishesButton').on('click', onGetPolishes)
   $('#clearPolishesButton').on('click', onClearPolishes)
   $('.content').on('click', '.delete-button', onDeletePolish)
+  // $('.content').on('click', '.update-button', onUpdatePolish)
 }
 
 module.exports = {
   addHandlers,
-  onAddPolish
+  onAddPolish,
+  onUpdatePolish
 }

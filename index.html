@@ -43,11 +43,13 @@
         </div>
 
         <nav>
+          <div class="get-clear-container">
             <div class="app-name">Ruby Red</div>
             <div class="nav-buttons">
               <button id="getPolishesButton" class="btn btn-info mr-2">Get Polishes!</button>
               <button id="clearPolishesButton" class="btn btn-outline-info">Clear Polishes!</button>
             </div>
+          </div>
           </nav>
 
           <main>
@@ -127,9 +129,10 @@
     <p>Add New Polish</p>
         <form id="add-polish" class="border">
           <h2>Add Polish</h2>
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand">
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name">
-          <input type="color" value="#b00519" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color">
+          <div class="add-polish-alert"></div>
+          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+          <input type="color" value="#b00519" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
           <!-- <input type="radio" name="nail_polish[glitter]" value="true"> Glitter<br>
           <input type="radio" name="nail_polish[glitter]" value="false" checked> No Glitter<br> -->
           <button type="submit" class="btn btn-primary btn-block">Add Polish!</button>
@@ -137,19 +140,19 @@
   </div>
 </div>
 
-<!-- <div class="update-polish-container">
-  <div id="update-polish" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
+<div class="update-polish-container">
+  <div class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
     <p>Update Polish</p>
-        <form id="Update-polish" class="border">
+        <form id="update-polish" class="border">
           <h2>Update Polish</h2>
+          <div class="update-polish-alert"></div>
+          <input type="number" autocomplete="off" class="form-control mb-1" name="nail_polish[id]" placeholder="Color Identifier">
           <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand">
           <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name">
           <input type="color" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color">
-          <input type="radio" name="nail_polish[glitter]" value="true"> Glitter<br>
-          <input type="radio" name="nail_polish[glitter]" value="false" checked> No Glitter<br>
           <button type="submit" class="btn btn-primary btn-block">Update Polish!</button>
         </form>
   </div>
-</div> -->
+</div>
     </body>
 </html>

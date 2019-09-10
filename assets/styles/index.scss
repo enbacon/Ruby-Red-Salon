@@ -4,6 +4,10 @@
 
 $black: #000;
 
+.add-polish-alert {
+  color: red;
+}
+
 body {
   background: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('https://images.all-free-download.com/images/graphiclarge/blue_bokeh_background_266395.jpg');
   background-position: center;
@@ -141,4 +145,8 @@ small {
 
 .success {
   border: 5px solid #22f0c0;
+}
+
+.update-polish-alert  {
+  color: red;
 }

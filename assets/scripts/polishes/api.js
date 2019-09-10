@@ -3,6 +3,28 @@
 const config = require('../config')
 const store = require('./../store')
 
+const addPolish = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/nail_polishes/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const updatePolish = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/nail_polishes/' + data.nail_polish.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 const getPolishes = function () {
   return $.ajax({
     url: config.apiUrl + '/nail_polishes'
@@ -19,19 +41,9 @@ const deletePolish = function (id) {
   })
 }
 
-const addPolish = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/nail_polishes/',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
-}
-
 module.exports = {
   addPolish,
+  updatePolish,
   getPolishes,
   deletePolish
 }

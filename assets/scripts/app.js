@@ -20,6 +20,8 @@ $(() => {
   $('.container').hide()
   $('#greeting').hide()
   $('.navbar').hide()
+  $('.update-polish-container').hide()
+  $('#update-polish').on('submit', polishEvents.onUpdatePolish)
   $('.modal').on('hidden.bs.modal', function () {
     $('form').trigger('reset')
     $('.sign-in-alert').text('')
@@ -27,4 +29,5 @@ $(() => {
   })
   $('#add-polish').on('submit', polishEvents.onAddPolish)
   $('.new-polish-container').hide()
+  $('.get-clear-container').hide()
 })

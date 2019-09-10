@@ -49,9 +49,11 @@ const signInSuccess = function (data) {
   $('.new-polish-container').show()
   $('#sign-out').show()
   $('.navbar').show()
+  $('.get-clear-container').show()
   $('#hide').css('display', 'block')
   $('.sign-in-alert').text('')
   $('#credentials').hide()
+  $('.update-polish-container').show()
   $('form').trigger('reset')
 }
 
