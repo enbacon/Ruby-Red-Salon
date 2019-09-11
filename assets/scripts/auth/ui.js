@@ -3,19 +3,20 @@ const store = require('./../store')
 const shared = require('../shared/code')
 
 const signUpSuccess = function () {
-  shared.setSuccess('Signed up successfully!')
+  $('.sign-up-alert').text('Signed up successfully!')
   $('#sign-up').hide()
+  $('.sign-up-alert').text('')
   $('form').trigger('reset')
 }
 
 const signUpFailure = function () {
+  console.log('signupfailure')
   $('.sign-up-alert').text('Sign up was not successful')
   $('form').trigger('reset')
 }
 
 const signInSuccess = function (data) {
   store.user = data.user
-  // shared.setSuccess('Signed in successfully!')
   $('#signed-in-user').text(store.user.email)
   $('.before-auth').hide()
   $('.after-auth').show()
@@ -24,6 +25,7 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#hide').css('display', 'block')
   $('form').trigger('reset')
+  $('.sign-up-alert').text('')
   // $('.get-clear-container').show()
   // $('.navbar').show()
   // $('.new-polish-container').show()
@@ -36,7 +38,7 @@ const signInSuccess = function (data) {
 
 const signInFailure = function () {
   $('.sign-in-alert').text('Sign in was not successful')
-  // $('.sign-up-alert').text('')
+  $('.sign-up-alert').text('')
   $('form').trigger('reset')
 }
 const changePasswordSuccess = function () {
@@ -67,17 +69,17 @@ const signOutSuccess = function () {
   $('#sign-up').show()
   $('#sign-out').hide()
   $('.container').hide()
-  $('#games-message').hide()
+  // $('#games-message').hide()
   $('.navbar').hide()
   $('.new-polish-container').hide()
   $('#credentials').show()
   $('.new-polish-container').hide()
   $('form').trigger('reset')
-  console.log('signed out successfully')
 }
 
 const signOutFailure = function () {
   shared.setFailure('Sign out was not successful.')
+  $('.change-password-alert').text('')
   $('form').trigger('reset')
   console.log('sign out failure')
 }
