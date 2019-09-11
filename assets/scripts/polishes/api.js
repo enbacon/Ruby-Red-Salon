@@ -27,7 +27,10 @@ const updatePolish = function (data) {
 
 const getPolishes = function () {
   return $.ajax({
-    url: config.apiUrl + '/nail_polishes'
+    url: config.apiUrl + '/nail_polishes',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
