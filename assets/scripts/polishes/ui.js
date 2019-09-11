@@ -1,13 +1,13 @@
 'use strict'
 
 const store = require('../store')
-const shared = require('../shared/code')
 
 const showPolishesTemplate = require('../templates/polish-listing.handlebars')
 
 const addPolishSuccess = (data) => {
   store.id = data.nail_polish.id
   $('#nail_polish').text(data)
+  $('form').trigger('reset')
 }
 
 const addPolishFailure = function () {
@@ -15,7 +15,6 @@ const addPolishFailure = function () {
 }
 
 const updatePolishSuccess = (data) => {
-  shared.setSuccess('Polish updated successfully!')
   $('#myModal').modal('show')
 }
 
