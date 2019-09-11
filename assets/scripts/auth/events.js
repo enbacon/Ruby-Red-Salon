@@ -40,18 +40,9 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const onCreateExample = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  api.createExample(data)
-    .then(ui.createExampleSuccess)
-    .catch(ui.createExampleFailure)
-}
-
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut,
-  onCreateExample
+  onSignOut
 }

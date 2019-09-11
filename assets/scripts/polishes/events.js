@@ -70,7 +70,6 @@ const addHandlers = () => {
   $('.content').on('click', '.delete-button', onDeletePolish)
   $('.content').on('click', '.update-button', onShowUpdateModal)
   $('#update-polish').on('submit', onUpdatePolish)
-  // $('#up')
 }
 
 module.exports = {

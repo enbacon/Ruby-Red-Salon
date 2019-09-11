@@ -2,20 +2,7 @@
 const store = require('./../store')
 const shared = require('../shared/code')
 
-// const setFailure = function (text) {
-//   $('#message').removeClass('success')
-//   $('#message').addClass('failure')
-//   $('#message').text(text)
-// }
-//
-// const setSuccess = function (text) {
-//   $('#message').removeClass('failure')
-//   $('#message').addClass('success')
-//   $('#message').text(text)
-// }
-
 const signUpSuccess = function () {
-  // store.token = data.user.token
   shared.setSuccess('Signed up successfully!')
   $('#sign-up').hide()
   $('form').trigger('reset')
@@ -28,7 +15,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   store.user = data.user
-  shared.setSuccess('Signed in successfully!')
+  // shared.setSuccess('Signed in successfully!')
   $('#signed-in-user').text(store.user.email)
   $('.before-auth').hide()
   $('.after-auth').show()
@@ -49,22 +36,19 @@ const signInSuccess = function (data) {
 
 const signInFailure = function () {
   $('.sign-in-alert').text('Sign in was not successful')
-  $('.sign-up-alert').text('')
+  // $('.sign-up-alert').text('')
   $('form').trigger('reset')
-  console.log('signInFailure ran')
 }
 const changePasswordSuccess = function () {
-  shared.setSuccess('Password changed successfully!')
+  // shared.setSuccess('Password changed successfully!')
   $('#change-password-modal').modal('hide')
   $('.change-password-alert').text('')
   $('form').trigger('reset')
-  console.log('changePasswordSuccess ran')
 }
 
 const changePasswordFailure = function () {
   $('.change-password-alert').text('Password was not changed succesfully.')
   $('form').trigger('reset')
-  console.log('changePasswordFailure ran')
 }
 
 const signOutSuccess = function () {
@@ -89,27 +73,11 @@ const signOutSuccess = function () {
   // $('#credentials').show()
   // $('.new-polish-container').hide()
   $('form').trigger('reset')
-  console.log('Signed out successfully')
 }
 
 const signOutFailure = function () {
   shared.setFailure('Sign out was not successful.')
   $('form').trigger('reset')
-  console.log('signOutFailure ran')
-}
-
-const createExampleSuccess = function (data) {
-  shared.setSuccess('Example created successfully!')
-  console.log(data)
-  $('#example').text(data.example.text)
-  console.log('createExampleSuccess ran')
-}
-
-const createExampleFailure = function () {
-  shared.setFailure('Example not created!')
-  $('form').trigger('reset')
-
-  console.log('createExampleFailure ran')
 }
 
 module.exports = {
@@ -120,7 +88,5 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  createExampleSuccess,
-  createExampleFailure
+  signOutFailure
 }

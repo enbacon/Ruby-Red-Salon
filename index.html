@@ -12,57 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-<!--
-
-      <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-            <a class="nav-item dropdown nav-link drop-down-toggle" onkeyup=""
-          </div>
-        </div>
-      </nav>
 
 
-      <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a> -->
-    <footer>
-      <nav class="before-auth navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">created by erin n. bacon</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav d-flex align-items-center mr-auto">
-            <li class="nav-item">
-              <div id="games-message" class="nav-link"></div>
-            </li>
-            <li class="nav-item">
-              <a id="change-password-button" class="nav-link align-middle btn btn-sm btn-secondary" data-toggle="modal" data-target="#change-password-modal" href="#">Change Password<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a id="sign-out" class="nav-link align-middle btn btn-sm btn-secondary" href="#">Sign Out<span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </footer>
-
-
+    <h1 class="before-auth">The Ruby Red Nail Polish Collection!</h1>
       <h1 id="greeting" class="after-auth">Welcome to Nail Polish Heaven!!!</h1>
         <!-- <div class="status-messages">
           <div id="signed-in-user"></div>
@@ -86,18 +38,17 @@
 
     <div class="before-auth sign-up-container">
       <div id="credentials" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
-        <h1>The Ruby Red Nail Polish Collection!</h1>
-            <form id="sign-up" class="border">
+            <form id="sign-up">
               <h2>sign up</h2>
               <div class="sign-up-alert"></div>
               <input type="email" autocomplete="off" class="form-control mb-1" name="credentials[email]" placeholder="email (fake please)">
               <input type="password" autocomplete="off" class="form-control mb-1" name="credentials[password]" placeholder="password">
               <input type="password" autocomplete="off" class="form-control mb-1" name="credentials[password_confirmation]" placeholder="confirm password">
-              <button type="submit" class="btn btn-primary btn-block">Sign Up!</button>
+              <button type="submit" class="btn btn-info btn-block">Sign Up!</button>
             </form>
               <p>
                 <small>
-                  already signed up?
+                  <h2>already signed up?</h2>
                   <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#sign-in-modal">
                     sign in
                   </button>
@@ -154,21 +105,16 @@
 
 <div class="after-auth new-polish-container">
   <div id="new-polish" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
-    <p>Add New Polish</p>
-        <form id="add-polish" class="border">
-          <h2>Add Polish</h2>
-          <div class="add-polish-alert"></div>
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
-          <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
-          <input type="color" value="#b00519" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
-          <!-- <input type="radio" name="nail_polish[glitter]" value="true"> Glitter<br>
-          <input type="radio" name="nail_polish[glitter]" value="false" checked> No Glitter<br> -->
-          <button type="submit" class="btn btn-primary btn-block">Add Polish!</button>
-        </form>
+    <form id="add-polish">
+      <h2>Add Polish</h2>
+      <div class="add-polish-alert"></div>
+      <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+      <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+      <input type="color" value="#ff2b3e" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
+      <button type="submit" class="btn btn-primary btn-block">Add Polish!</button>
+    </form>
   </div>
 </div>
-
-
 
     <div id="update-modal" class="update-polish-container modal fade"tabindex="-1" role="dialog" aria-label="update polish" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -189,5 +135,47 @@
         </div>
       </div>
     </div>
+    <!--
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+  <a class="nav-item nav-link" href="#">Features</a>
+  <a class="nav-item nav-link" href="#">Pricing</a>
+  <a class="nav-item nav-link disabled" href="#">Disabled</a>
+  <a class="nav-item dropdown nav-link drop-down-toggle" onkeyup=""
+</div>
+</div>
+</nav>
+ -->
+<!-- <button type="button" class="btn btn-link">Link</button> -->
+
+<footer>
+  <nav class="navbar fixed-bottom navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">created by erin n. bacon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav d-flex align-items-center mr-auto">
+        <li class="nav-item">
+          <div id="games-message" class="nav-link"></div>
+        </li>
+        <li class="nav-item">
+          <a id="change-password-button" class="nav-link align-middle btn btn-sm btn-secondary" data-toggle="modal" data-target="#change-password-modal" href="#">Change Password<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a id="sign-out" class="nav-link align-middle btn btn-sm btn-secondary" href="#">Sign Out<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+
   </body>
 </html>

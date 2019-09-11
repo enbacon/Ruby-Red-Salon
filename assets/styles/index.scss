@@ -12,7 +12,7 @@ body {
   background-image: url('../../public/nail-polish.jpg');
   background-position: center;
   background-size: cover;
-  color: #D90909;
+  color: #eb1a2d;
   display: grid;
   font-family: 'Merienda', cursive;
   min-height: 90vh;
@@ -59,17 +59,18 @@ body {
 }
 
 h1 {
-  color: #D90909;
+  color: #eb1a2d;
   font-family: 'Courgette', cursive;
   font-size: 3em;
   font-weight: 850;
-  margin: 20px 10px 20px 10px;
+  margin: 0 auto;
   text-align: center;
 }
 
 h2 {
   font-size: 1.5em;
   text-align: center;
+  margin-top: 20px;
 }
 
 .header {
@@ -142,17 +143,17 @@ p {
 }
 
 small {
-  font-size: .5em;
+  font-size: .75em;
   line-height: 15px;
 }
 
-.status-messages {
-  font-size: 1.5em;
-  justify-content: center;
-  // margin: 0 1em;
-  // padding: 0 1em;
-  text-align: center;
-}
+// .status-messages {
+//   font-size: 1.5em;
+//   justify-content: center;
+//   // margin: 0 1em;
+//   // padding: 0 1em;
+//   text-align: center;
+// }
 
 .update-polish-alert  {
   color: red;
