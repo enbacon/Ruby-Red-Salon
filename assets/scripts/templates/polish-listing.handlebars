@@ -1,14 +1,13 @@
 {{#each nail_polishes as |polish|}}
-{{log polish}}
-  <section id="{{polish.id}}">
+  <section id="{{polish.id}}" class="col-md-6 col-lg-4 d-flex justify-content-start flex-column align-items-center">
     <h6>Brand: {{polish.brand}}</h6>
     <h6>Name: {{polish.color_name}}</h6>
     <h6>Color:</h6>
-    <div style="background-color:{{polish.color}}; margin: 1rem 4rem; height:3.5rem; width:3.5rem; border-radius:50%"></div>
+    <div style="background-color:{{polish.color}}; height:3.5rem; width:3.5rem; border-radius:50%"></div>
 
     {{#if polish.editable}}
-      <button data-id="{{polish.id}}" data-brand="{{polish.brand}}" data-color-name="{{color_name}}" data-color="{{color}}" class='btn btn btn-primary update-button'>Update polish</button>
-      <button data-id="{{polish.id}}" class='btn btn-danger delete-button'>Remove polish</button>
+      <button data-id="{{polish.id}}" data-brand="{{polish.brand}}" data-color-name="{{color_name}}" data-color="{{color}}" class='btn btn-primary btn-small update-button'>Update polish</button>
+      <button data-id="{{polish.id}}" class='btn btn-danger btn-small delete-button'>Remove polish</button>
     {{/if}}
 
   </section>

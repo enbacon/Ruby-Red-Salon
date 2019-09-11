@@ -11,29 +11,42 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-
-
-    <h1 class="before-auth">The Ruby Red Nail Polish Collection!</h1>
+    <body class="container-fluid">
+      <h1 class="before-auth">The Ruby Red Nail Polish Collection!</h1>
       <h1 id="greeting" class="after-auth">Welcome to Nail Polish Heaven!!!</h1>
-        <!-- <div class="status-messages">
-          <div id="signed-in-user"></div>
-          <div id="signed-out-user"></div>
-          <div id="message" class="message col-sm-10 col-lg-8 text-center"></div>
-        </div> -->
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
 
-        <nav>
-          <div class="after-auth get-clear-container">
-            <div class="nav-buttons">
-              <button id="getPolishesButton" class="btn btn-info mr-2">Display Polishes!</button>
-              <button id="clearPolishesButton" class="btn btn-outline-info">Clear Polishes!</button>
-            </div>
-          </div>
-          </nav>
+              <div class="after-auth new-polish-container">
+                <div id="new-polish">
+                  <form id="add-polish">
+                    <!-- <h2>Add Polish</h2> -->
+                    <div class="add-polish-alert"></div>
+                    <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+                    <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+                    <input type="color" value="#ff2b3e" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
+                    <button type="submit" class="btn btn-info btn-block add-button">Add Polish!</button>
+                  </form>
+                </div>
+              </div>
 
-          <main>
-            <div id="content" class="content after-auth"></div>
-        </main>
+              <nav>
+                <div class="after-auth get-clear-container">
+                  <div class="nav-buttons">
+                    <button id="getPolishesButton" class="btn btn-list btn-outline-dark mr-2 mb-2">Display Polishes!</button>
+                    <button id="clearPolishesButton" class="btn btn-list btn-outline-dark mr-2 mb-2">Clear Polishes!</button>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <div class="col-lg-9 col-sm-6">
+            <main>
+              <div id="content" class="content after-auth row"></div>
+          </main>
+        </div>
+      </div>
+
+
 
     <div class="before-auth sign-up-container">
       <div id="credentials" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
@@ -103,18 +116,7 @@
   </div>
 </div>
 
-<div class="after-auth new-polish-container">
-  <div id="new-polish" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
-    <form id="add-polish">
-      <h2>Add Polish</h2>
-      <div class="add-polish-alert"></div>
-      <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
-      <input type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
-      <input type="color" value="#ff2b3e" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
-      <button type="submit" class="btn btn-info btn-block">Add Polish!</button>
-    </form>
-  </div>
-</div>
+
 
   <div id="update-modal" class="update-polish-container modal fade"tabindex="-1" role="dialog" aria-label="update polish" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -135,24 +137,6 @@
       </div>
     </div>
   </div>
-    <!--
-    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-  <div class="navbar-nav">
-  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-  <a class="nav-item nav-link" href="#">Features</a>
-  <a class="nav-item nav-link" href="#">Pricing</a>
-  <a class="nav-item nav-link disabled" href="#">Disabled</a>
-  <a class="nav-item dropdown nav-link drop-down-toggle" onkeyup=""
-</div>
-</div>
-</nav>
- -->
-<!-- <button type="button" class="btn btn-link">Link</button> -->
 
 <footer>
   <nav class="after-auth navbar fixed-bottom navbar-expand-lg navbar-light">

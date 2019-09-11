@@ -11,7 +11,6 @@ const onAddPolish = (event) => {
     .then(ui.addPolishSuccess)
     .then(() => {
       onGetPolishes(event)
-      // ui.getPolishesSuccess()
     })
     .catch(ui.addPolishFailure)
 }
@@ -31,7 +30,6 @@ const onShowUpdateModal = () => {
 
 const onUpdatePolish = (event) => {
   event.preventDefault()
-  console.log('clicked')
   const data = getFormFields(event.target)
   api.updatePolish(data)
     .then(ui.updatePolishSuccess)
@@ -44,7 +42,6 @@ const onUpdatePolish = (event) => {
 
 const onGetPolishes = (event) => {
   event.preventDefault()
-  console.log('get polishes is working')
   api.getPolishes()
     .then(ui.getPolishesSuccess)
     .catch(ui.failure)

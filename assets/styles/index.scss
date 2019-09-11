@@ -1,21 +1,31 @@
+$primary: #2193b0;
+$danger: #eb1a2d;
+
 @import '~bootstrap/scss/bootstrap';
 
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Asar|Farsan|Merienda|Norican|Sofia&display=swap');
 
 $black: #000;
 
+.add-button {
+  margin-bottom: 10px;
+}
+
 .add-polish-alert {
   color: red;
 }
 
 body {
+  // min-height: 100vh background-attachment: fixed;, background-size: cover;
+  // This recipe makes your image stay "static" without getting funky from contents
+  background-attachment: fixed;
   background-image: url('../../public/nail-polish.jpg');
   background-position: center;
   background-size: cover;
   color: #eb1a2d;
   display: grid;
   font-family: 'Merienda', cursive;
-  min-height: 90vh;
+  min-height: 100vh;
   padding-bottom: 5rem;
 }
 
@@ -38,6 +48,11 @@ body {
   color: black;
 }
 
+.btn-list {
+  font-size: 14px;
+  font-weight: 900;
+}
+
 .change-password-alert {
   color: red;
 }
@@ -54,6 +69,10 @@ body {
   text-align: center;
 }
 
+.delete-button {
+  margin-bottom: 10px;
+}
+
 .fail {
   border: 5px solid red;
 }
@@ -65,6 +84,7 @@ body {
 .get-clear-container {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 h1 {
@@ -72,7 +92,7 @@ h1 {
   font-family: 'Courgette', cursive;
   font-size: 3em;
   font-weight: 850;
-  margin: 0 auto;
+  margin: 0 20px 10px 20px;
   text-align: center;
 }
 
@@ -98,7 +118,7 @@ h2 {
 }
 
 .modal-header {
-  background-color: #2193b0;
+  background-color: $primary;
 }
 
 .modal-title {
@@ -107,6 +127,13 @@ h2 {
 
 .navbar {
   background-color: #2193b0;
+  padding: 4px 16px;
+}
+
+.navbar-brand {
+  // color: deeppink !important;
+  font-size: 1em;
+  font-weight: 900;
 }
 
 p {
@@ -118,9 +145,7 @@ p {
 }
 
 .row {
-  height: 50vmin;
   text-align: center;
-  width: 50vmin;
 }
 
 .sign-in-alert {
@@ -132,12 +157,6 @@ p {
 }
 
 .sign-up-container {
-  display: flex;
-  justify-content: center;
-}
-
-.new-polish-container,
-.update-polish-container {
   display: flex;
   justify-content: center;
 }
