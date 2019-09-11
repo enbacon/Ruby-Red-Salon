@@ -58,6 +58,11 @@ body {
   border: 5px solid red;
 }
 
+.get-clear-container {
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   color: #eb1a2d;
   font-family: 'Courgette', cursive;
@@ -98,10 +103,6 @@ h2 {
 
 .navbar {
   background-color: #2193b0;
-}
-
-.nav-buttons {
-  justify-content: center;
 }
 
 p {
@@ -157,4 +158,9 @@ small {
 
 .update-polish-alert  {
   color: red;
+}
+
+.update-button,
+delete-button, {
+  margin: 5px;
 }

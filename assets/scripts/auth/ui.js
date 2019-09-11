@@ -20,18 +20,18 @@ const signInSuccess = function (data) {
   $('.before-auth').hide()
   $('.after-auth').show()
   $('#change-password-button').show()
-  // $('#sign-up').hide()
   $('#sign-in-modal').modal('hide')
-  // $('.new-polish-container').show()
   $('#sign-out').show()
-  $('.navbar').show()
-  // $('.get-clear-container').show()
   $('#hide').css('display', 'block')
+  $('form').trigger('reset')
+  // $('.get-clear-container').show()
+  // $('.navbar').show()
+  // $('.new-polish-container').show()
+  // $('#sign-up').hide()
   // $('.sign-in-alert').text('')
-  $('#credentials').hide()
+  // $('#credentials').hide()
   // $('#greeting').show()
   // $('.update-polish-container').show()
-  $('form').trigger('reset')
 }
 
 const signInFailure = function () {
@@ -58,26 +58,28 @@ const signOutSuccess = function () {
   // could also set to store.user = null
   store.user = {}
   $('#signed-in-user').text('')
-  shared.setSuccess('Signed out successfully!')
+  // shared.setSuccess('Signed out successfully!')
   // $('#message').className('success') // better?
-  $('.before-auth').hide()
-  $('.after-auth').show()
-  // $('#change-password-button').hide()
-  // $('#sign-in').show()
-  // $('#sign-up').show()
-  // $('#sign-out').hide()
+  $('.before-auth').show()
+  $('.after-auth').hide()
+  $('#change-password-button').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  $('#sign-out').hide()
   $('.container').hide()
-  // $('#games-message').hide()
-  // $('.navbar').hide()
-  // $('.new-polish-container').hide()
-  // $('#credentials').show()
-  // $('.new-polish-container').hide()
+  $('#games-message').hide()
+  $('.navbar').hide()
+  $('.new-polish-container').hide()
+  $('#credentials').show()
+  $('.new-polish-container').hide()
   $('form').trigger('reset')
+  console.log('signed out successfully')
 }
 
 const signOutFailure = function () {
   shared.setFailure('Sign out was not successful.')
   $('form').trigger('reset')
+  console.log('sign out failure')
 }
 
 module.exports = {
