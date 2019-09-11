@@ -19,7 +19,7 @@ body {
   // min-height: 100vh background-attachment: fixed;, background-size: cover;
   // This recipe makes your image stay "static" without getting funky from contents
   background-attachment: fixed;
-  background-image: url('../../public/nail-polish.jpg');
+  background-image: linear-gradient(rgba(255,255,255, .15), rgba(255, 255, 255, .15)), url('../../public/nail-polish.jpg');
   background-position: center;
   background-size: cover;
   color: #eb1a2d;
@@ -79,6 +79,10 @@ body {
 
 .failure {
   border: 5px solid red;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, .75);
 }
 
 .get-clear-container {
