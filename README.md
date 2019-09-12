@@ -58,7 +58,7 @@ A few wireframes and some ERDs helped formulate this project. Although a “Vers
 * As a user, I want to be able to log out of my account.
 
 
-### Development Process and Problem Solving
+# Development Process and Problem Solving
 * Get the back-end, Ruby-Red, built.
 * Without being certain of Rails’ plural version of “nail polish”, an inflections initializer had to be written.
 * Scaffold the required nail polish resources using rails, and then write curl scripts for the end points of the resources.
