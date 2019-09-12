@@ -57,6 +57,7 @@ const signOutSuccess = function () {
   $('.new-polish-container').hide()
   $('#credentials').show()
   $('.new-polish-container').hide()
+  $('.content').empty()
   $('form').trigger('reset')
 }
 
