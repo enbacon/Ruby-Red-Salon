@@ -3,7 +3,7 @@
     <h6 class="brand mt-2">Brand: {{polish.brand}}</h6>
     <h6>Name: {{polish.color_name}}</h6>
     <h6>Color:</h6>
-    <div class="swatch mb-2 mt-1" style="background-color:{{polish.color}}; height:4rem; width:4rem; border-radius:50%; border: 1px solid white; box-shadow: 2px 2px 0 grey"></div>
+    <div class="swatch mb-2 mt-1" style="background-color:{{polish.color}};"></div>
 
     {{#if polish.editable}}
       <button data-id="{{polish.id}}" data-brand="{{polish.brand}}" data-color-name="{{color_name}}" data-color="{{color}}" class='btn btn-primary btn-small update-button'>Update polish</button>
@@ -13,3 +13,5 @@
   </section>
 
 {{/each}}
+
+<!-- height:4rem; width:4rem; border-radius:50%; border: 1px solid white; box-shadow: 2px 2px 0 grey -->

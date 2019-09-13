@@ -180,6 +180,30 @@ small {
   line-height: 15px;
 }
 
+.swatch {
+  // background-color: red;
+  border-radius: 50%;
+  box-shadow:
+  inset -2vh -2vh 3vh rgba(0,0,0,.5),
+  inset 2px 2px 23px rgba(255,255,255,.15),
+  5px 5px 15px rgba(0,0,0,.25);
+  height: 15vh;
+  position: relative;
+  width: 15vh;
+}
+
+.swatch::before {
+  background-color: rgba(255,255,255,.25);
+  border-radius: 50%;
+  content: '';
+  height: 4vh;
+  left: .7rem;
+  position: absolute;
+  top: .5rem;
+  transform: skewY(-15deg) rotate(45deg);
+  width: 2vh;
+}
+
 .update-polish-alert  {
   color: red;
 }
