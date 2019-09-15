@@ -209,6 +209,13 @@ small {
 }
 
 .update-button,
-delete-button, {
+.delete-button, {
+  font-size: 2vh;
+  height: 4vh;
   margin: 5px;
+  padding: 4px;
+}
+
+.update-delete-container {
+  display: flex;
 }

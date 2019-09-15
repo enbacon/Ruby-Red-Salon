@@ -6,10 +6,11 @@
     <div class="swatch mb-2 mt-1" style="background-color:{{polish.color}};"></div>
 
     {{#if polish.editable}}
-      <button data-id="{{polish.id}}" data-brand="{{polish.brand}}" data-color-name="{{color_name}}" data-color="{{color}}" class='btn btn-primary btn-small update-button'>Update polish</button>
-      <button data-id="{{polish.id}}" class='btn btn-danger btn-small delete-button'>Remove polish</button>
+    <div class="update-delete-container">
+      <button data-id="{{polish.id}}" data-brand="{{polish.brand}}" data-color-name="{{color_name}}" data-color="{{color}}" class='btn btn-outline-dark btn-small update-button'>Update</button>
+      <button data-id="{{polish.id}}" class='btn btn-outline-dark btn-small delete-button'>Remove</button>
     {{/if}}
-
+    </div>
   </section>
 
 {{/each}}
