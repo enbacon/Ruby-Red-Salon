@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ruby Red Salon</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <h1 class="before-auth">The Ruby Red Nail Polish Collection!</h1>
+      <h1 id="greeting" class="after-auth">Welcome to Nail Polish Heaven!!!</h1>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+
+              <div class="after-auth new-polish-container">
+                <div id="new-polish">
+                  <form id="add-polish">
+                    <!-- <h2>Add Polish</h2> -->
+                    <div class="add-polish-alert"></div>
+                    <input type="text" autocomplete="off" class="add form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+                    <input type="text" autocomplete="off" class="add form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+                    <input type="color" value="#ff2b3e" autocomplete="off" class="add form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
+                    <button type="submit" class="btn btn-info btn-block add-button">Add Polish!</button>
+                  </form>
+                  <nav>
+                    <div class="after-auth get-clear-container">
+                      <div class="nav-buttons">
+                        <button id="getPolishesButton" class="btn btn-list btn-dark mr-2 mb-2">Display Polishes!</button>
+                        <button id="clearPolishesButton" class="btn btn-list btn-dark mr-2 mb-2">Clear Polishes!</button>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+        <div class="col-lg-9 col-sm-6">
+            <main>
+              <div id="content" class="content after-auth row"></div>
+          </main>
+        </div>
+      </div>
+
+    <div class="before-auth sign-up-container">
+      <div id="credentials" class="col-sm-8 col-md-6 col-lg-4 text-center controls pt-2">
+          <form id="sign-up">
+            <h2>sign up</h2>
+            <div class="sign-up-alert"></div>
+            <input type="email" autocomplete="off" class="form-control mb-1" name="credentials[email]" placeholder="email (fake please)">
+            <input type="password" autocomplete="off" class="form-control mb-1" name="credentials[password]" placeholder="password">
+            <input type="password" autocomplete="off" class="form-control mb-1" name="credentials[password_confirmation]" placeholder="confirm password">
+            <button type="submit" class="btn btn-info btn-block">Sign Up!</button>
+          </form>
+            <p>
+              <small>
+                <h2>already signed up?</h2>
+                <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#sign-in-modal">
+                  sign in
+                </button>
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Button Trigger Modal -->
+      <div class="before-auth">
+        <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modal-label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sign-in-modal-label">Sign In!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="sign-in" class="border">
+                  <div class="sign-in-alert"></div>
+                  <input class="form-control mb-2" autocomplete="on" type="text" name="credentials[email]" placeholder="Email">
+                  <input class="form-control mb-2" autocomplete="on" type="password" name="credentials[password]" placeholder="Password">
+                  <input class="btn btn-info" type="submit"  value="Sign in!">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="change-password-modal-label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="change-password-modal-label">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="change-password" class="border">
+          <div class="change-password-alert"></div>
+          <input class="change-pw form-control mb-2" type="password" autocomplete="off" name="passwords[old]" placeholder="Current password">
+          <input class="change-pw form-control mb-2" type="password" autocomplete="off" name="passwords[new]" placeholder="New password">
+          <input class="btn btn-info" type="submit"  value="Change Password!">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div id="update-modal" class="update-polish-container modal fade"tabindex="-1" role="dialog" aria-label="update polish" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Update Polish</h4>
+        </div>
+        <div class="modal-body">
+          <form id="update-polish" class="border">
+            <div class="update-polish-alert"></div>
+            <input id="id" type="text" name="nail_polish[id]" hidden>
+            <input id="brand" type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[brand]" placeholder="Brand" required>
+            <input id="color-name" type="text" autocomplete="off" class="form-control mb-1" name="nail_polish[color_name]" placeholder="Polish Name" required>
+            <input id="color" type="color" autocomplete="off" class="form-control mb-1" name="nail_polish[color]" placeholder="Color" required>
+            <button type="submit" class="btn btn-block">Update Polish!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <nav class="after-auth navbar fixed-bottom navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">created by erin n. bacon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav d-flex align-items-center mr-auto">
+        <li class="nav-item">
+          <a id="change-password-button" class="btn btn-link after-auth" data-toggle="modal" data-target="#change-password-modal" href="#">Change Password<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a id="sign-out" class="btn btn-link after-auth" href="#">Sign Out<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    <a class="navbar-brand navbar-second-brand" href="#">WWJMD</a>
+  </nav>
+</footer>
+
+  </body>
+</html>
