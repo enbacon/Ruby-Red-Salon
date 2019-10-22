@@ -1,4 +1,5 @@
 $primary: #2193b0;
+$secondary: #fff;
 $danger: #eb1a2d;
 
 @import '~bootstrap/scss/bootstrap';
@@ -22,7 +23,7 @@ body {
   background-image: linear-gradient(rgba(255,255,255, .15), rgba(255, 255, 255, .15)), url('public/nail-polish.jpg');
   background-position: center;
   background-size: cover;
-  color: #eb1a2d;
+  color: $danger;
   display: grid;
   font-family: 'Merienda', cursive;
   min-height: 100vh;
@@ -92,7 +93,7 @@ body {
 }
 
 h1 {
-  color: #eb1a2d;
+  color: $danger;
   font-family: 'Courgette', cursive;
   font-size: 3.5em;
   font-weight: 850;
@@ -121,13 +122,23 @@ h2 {
   margin: 0 auto;
 }
 
+.modal-body {
+  background-color: $secondary;
+  margin: 1px black solid;
+}
+
+// remove white on upper right side of modal title
+.modal-content {
+  background-color: transparent;
+}
+
 .modal-header {
   background-color: $primary;
-  color: white;
+  color: $secondary;
 }
 
 .modal-title {
-  color: white;
+  color: $secondary;
 }
 
 .navbar {
