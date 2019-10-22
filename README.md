@@ -1,44 +1,37 @@
 # Ruby Red Salon
 
 ### Links for Ruby Red Full Stack Project
-#### Back-end
-* https://powerful-beyond-68228.herokuapp.com/
-* https://github.com/enbacon/Ruby-Red
-
-
 #### Front-end
 * https://enbacon.github.io/Ruby-Red-Salon/
 * https://github.com/enbacon/Ruby-Red-Salon
 
-## Back-end Technologies Used
-
-* HTML5
-* CSS
-* SASS
-* AJAX
-* jQuery
-* SQL
-* PostgreSQL
-* Ruby
-* Rail
+#### Back-end
+* https://powerful-beyond-68228.herokuapp.com/
+* https://github.com/enbacon/Ruby-Red
 
 ## Front-end Technologies Used
 
 * HTML5
-* CSS
+* CSS3
 * SASS
 * Bootstrap
 * AJAX
 * jQuery
 * Handlebars
 
-# Planning:
-### Back-end Repository
-* Entity Relationship Diagram: https://imgur.com/gallery/8ptt920
+## Back-end Technologies Used
 
+* Ruby
+* Rails
+* SQL
+* PostgreSQL
 
+## Planning:
 ### Front-end Repository
 * Wireframes: https://imgur.com/a/AgPC6MG
+
+### Back-end Repository
+* Entity Relationship Diagram: https://imgur.com/gallery/8ptt920
 
 The idea of having a database to store nail polishes was a result of a love of nail polishes and being able to use them to express feelings when one might potentially be stuck dressing in all black. Also, the act of painting one’s nails can be meditative and the color variety, finish options, and combinations is quite fun. It also seemed like it had potential to be an aesthetically fun project with a variety of colors on the page.
 
@@ -57,7 +50,7 @@ A few wireframes and some ERDs helped formulate this project. Although a “Vers
 * As a user, I want to be able to log out of my account.
 
 
-#o Development Process and Problem Solving
+## Development Process and Problem Solving
 * Get the back-end, Ruby-Red, built.
 * Without being certain of Rails’ plural version of “nail polish”, an inflections initializer had to be written.
 * Scaffold the required nail polish resources using rails, and then write curl scripts for the end points of the resources.
@@ -71,7 +64,7 @@ A few wireframes and some ERDs helped formulate this project. Although a “Vers
 * Html content had to be added so there would be buttons to make calls to the api, and containers for the polishes to be displayed.
 
 
-### Difficulties faced
+### Difficulties Faced
 * Populating 'update' and 'delete' buttons only for the nail polishes created by the signed in user.
 * Getting the sign up to automatically sign in.
 * Populating the update modal form fields with the content of the to be updated.
